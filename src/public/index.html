@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NEXORA — Digital Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/store.css">
+<link rel="stylesheet" href="/assets/css/admin.css">
+</head>
+<body>
+
+<header id="site-header">
+  <div class="wrap header-inner">
+    <a href="#home" class="brand" data-nav="home">
+      <span class="brand-mark" id="brand-mark">N</span>
+      <span id="brand-name">NEXORA</span>
+    </a>
+    <nav class="main-nav">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#catalog" data-nav="catalog">Catalogo</a>
+      <a href="#catalog?cat=digital" data-nav="catalog">Prodotti Digitali</a>
+      <a href="#catalog?cat=license" data-nav="catalog">Licenze</a>
+      <a href="#catalog?cat=subscription" data-nav="catalog">Abbonamenti</a>
+    </nav>
+    <div class="header-actions">
+      <a class="icon-btn" href="#account" title="Account" data-nav="account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+      </a>
+      <button class="icon-btn" id="open-cart-btn" title="Carrello">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.5 3h2l2.4 12.2a2 2 0 0 0 2 1.6h8.6a2 2 0 0 0 2-1.6L21 8H6"/></svg>
+        <span class="cart-count hidden" id="cart-count">0</span>
+      </button>
+      <button class="icon-btn burger" id="burger-btn" title="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer id="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="brand" style="margin-bottom:14px;">
+          <span class="brand-mark" id="brand-mark-2">N</span>
+          <span id="brand-name-2">NEXORA</span>
+        </div>
+        <p style="color:var(--text-faint);font-size:.86rem;max-width:32ch;" id="brand-tagline-foot">Il tuo hub per prodotti digitali, licenze e abbonamenti — tutto in un posto solo.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Negozio</h4>
+        <a href="#catalog" data-nav="catalog">Tutti i prodotti</a>
+        <a href="#catalog?cat=digital" data-nav="catalog">Prodotti Digitali</a>
+        <a href="#catalog?cat=license" data-nav="catalog">Licenze Software</a>
+        <a href="#catalog?cat=subscription" data-nav="catalog">Abbonamenti</a>
+      </div>
+      <div class="foot-col">
+        <h4>Supporto</h4>
+        <a href="#account" data-nav="account">I miei ordini</a>
+        <a href="javascript:void(0)" data-legal="terms">Termini di servizio</a>
+        <a href="javascript:void(0)" data-legal="privacy">Privacy policy</a>
+        <a href="javascript:void(0)" data-legal="refund">Politica di rimborso</a>
+      </div>
+      <div class="foot-col">
+        <h4>Community</h4>
+        <a href="#" id="foot-discord" target="_blank" rel="noopener">Discord</a>
+        <a href="#admin-login" data-nav="admin-login">Area amministratore</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="foot-year"></span> <span id="brand-name-3">NEXORA</span>. Tutti i diritti riservati.</span>
+    </div>
+  </div>
+</footer>
+
+<div id="cart-overlay" class="hidden"></div>
+<aside id="cart-drawer" class="hidden">
+  <div class="drawer-head">
+    <h3 style="font-size:1.05rem;">Il tuo carrello</h3>
+    <button class="icon-btn" id="close-cart-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="drawer-body" id="cart-body"></div>
+  <div class="drawer-foot" id="cart-foot"></div>
+</aside>
+
+<div id="modal-slot"></div>
+<div id="toast-slot"></div>
+
+<script src="/assets/js/api.js"></script>
+<script src="/assets/js/helpers.js"></script>
+<script src="/assets/js/state.js"></script>
+<script src="/assets/js/cart.js"></script>
+<script src="/assets/js/views.js"></script>
+<script src="/assets/js/admin.js"></script>
+<script src="/assets/js/router.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
